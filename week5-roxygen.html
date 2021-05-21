@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -336,81 +338,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-calendar"></span>
-     
-    Workshop Weekly Notes
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="week1-rstudio.html">
-        <span class="fas fa-cogs"></span>
-         
-        Week 1 RStudio + Version Control
-      </a>
-    </li>
-    <li>
-      <a href="week2-coding.html">
-        <span class="fas fa-code"></span>
-         
-        Week 2 More Git + Code Organization
-      </a>
-    </li>
-    <li>
-      <a href="week3-RMarkdown.html">
-        <span class="fas fa-file"></span>
-         
-        Week 3 R Markdown
-      </a>
-    </li>
-    <li>
-      <a href="week4-packages.html">
-        <span class="fas fa-archive"></span>
-         
-        Week 4 R Packages
-      </a>
-    </li>
-    <li>
-      <a href="week5-roxygen.html">
-        <span class="fas fa-question-circle"></span>
-         
-        Week 5 Roxygen
-      </a>
-    </li>
-    <li>
-      <a href="week6-more-packages.html">
-        <span class="fas fa-folder"></span>
-         
-        Week 6 More Packages
-      </a>
-    </li>
-    <li>
-      <a href="week7-more-git.html">
-        <span class="fas fa-git"></span>
-         
-        Week 7 More Git
-      </a>
-    </li>
-    <li>
-      <a href="week8-ggplot2.html">
-        <span class="fas fa-image"></span>
-         
-        Week 8 ggplot2
-      </a>
-    </li>
-    <li>
-      <a href="week9-data-wrangling.html">
-        <span class="fas fa-broom"></span>
-         
-        Week 9 tidyverse
-      </a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-git"></span>
+    <span class="fab fa-git"></span>
      
     Git
      
@@ -419,14 +347,14 @@ div.tocify {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="intro-git.html">
-        <span class="fas fa-cogs"></span>
+        <span class="fab fa-github"></span>
          
-        Intro to Git + GitHub/Lab
+        Intro to Git + GitHub
       </a>
     </li>
     <li>
       <a href="more-git.html">
-        <span class="fas fa-github"></span>
+        <span class="fab fa-github-alt"></span>
          
         More Git + GitHub
       </a>
@@ -440,7 +368,7 @@ div.tocify {
     </li>
     <li>
       <a href="websites.html">
-        <span class="fas fa-chrome"></span>
+        <span class="fab fa-chrome"></span>
          
         Websites with GitHub
       </a>
@@ -503,10 +431,42 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="week6-more-packages.html">
+        <span class="fas fa-folder"></span>
+         
+        More package stuff
+      </a>
+    </li>
+    <li>
       <a href="shiny.html">
         <span class="fas fa-gamepad"></span>
          
         Shiny GUIs
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-broom"></span>
+     
+    Tidyverse
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="week8-ggplot2.html">
+        <span class="fas fa-image"></span>
+         
+        ggplot2
+      </a>
+    </li>
+    <li>
+      <a href="week9-data-wrangling.html">
+        <span class="fas fa-broom"></span>
+         
+        tidyr
       </a>
     </li>
   </ul>
@@ -526,8 +486,8 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/RVerse-Tutorials/RWorkflow-NWFSC-2020">
-    <span class="fas fa-github"></span>
+  <a href="https://github.com/RVerse-Tutorials/RWorkflow">
+    <span class="fab fa-github"></span>
      
     Repo
   </a>
@@ -549,12 +509,34 @@ div.tocify {
 </div>
 
 
-<div id="documenting-your-code-and-data-with-roxygen" class="section level1">
-<h1>Documenting your code and data with Roxygen</h1>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Compartmentalized
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Documented
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Extendible
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Reproducible
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Robust
+</td>
+</tr>
+</tbody>
+</table>
+<div id="roxygen" class="section level2">
+<h2>Roxygen</h2>
 <p>We all know that documenting our code is important, but equally important is to be able to read that documentation. If you use R, you know that the help feature (?function) is essential. If you organize your code into an R package, it is super easy to create help files that you and users can use to call up using ?. Documenting code may sound like a snoozer of a topic, but using Roxygen and diligently writing documentation for my functions and data is one of the top 3 habits that has made my coding more efficient. You can also document all your data in the same way.</p>
 <p>For more help on Roxygen, see the section in Hadley Wickham’s book R Packages on <a href="http://r-pkgs.had.co.nz/man.html">Documentation</a>. Here’s a short cheatsheet <a href="https://stuff.mit.edu/afs/athena/software/r/current/RStudio/resources/roxygen_help.html">Roxygen helper</a>. Also Roxygen has good tutorials and help. Type</p>
 <pre><code>browseVignettes(package=&quot;roxygen2&quot;)</code></pre>
 <p>to open a browser window with links to the tutorials.</p>
+</div>
 <div id="type-of-documentation" class="section level2">
 <h2>Type of documentation</h2>
 <p>Roxygen (and the the ‘Build and Install’ step) will create a the help files that users access with `?function.name.</p>
@@ -564,8 +546,7 @@ div.tocify {
 <p>The man files are also used by <strong>pkgdown</strong> to make a website version of your documentation. Here is an example of the default <a href="http://jebyrnes.github.io/multifunc/index.html">pkgdown-generated webpage</a>.</p>
 <div id="not-just-for-public-products" class="section level3">
 <h3>Not just for public products!</h3>
-<p>This is an example of a package that is purely <em>personal</em>. It is for the data, and a few utility functions, for a group of researchers working with a shared set of data.</p>
-<pre><code>help(package=&quot;SardineForecast&quot;)</code></pre>
+<p>I use Roxygen to document my personal projects more than for public projects. The Roxygen format helps me document both my functions and data that I am using so that I can reproduce my own work and so I have the information that I need when I do the final write-ups.</p>
 </div>
 </div>
 <div id="set-up" class="section level2">
@@ -659,7 +640,6 @@ yourfunction &lt;- function(param.name1, param.name2){}</code></pre>
 <pre><code>citation(package=&quot;ggplot2&quot;)</code></pre>
 <p>Add the citation to your Rd file with</p>
 <pre><code>\insertRef{Waltonetal1998}{MyNewPackage}</code></pre>
-</div>
 </div>
 </div>
 

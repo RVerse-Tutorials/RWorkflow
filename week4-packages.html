@@ -338,81 +338,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-calendar"></span>
-     
-    Workshop Weekly Notes
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="week1-rstudio.html">
-        <span class="fas fa-cogs"></span>
-         
-        Week 1 RStudio + Version Control
-      </a>
-    </li>
-    <li>
-      <a href="week2-coding.html">
-        <span class="fas fa-code"></span>
-         
-        Week 2 More Git + Code Organization
-      </a>
-    </li>
-    <li>
-      <a href="week3-RMarkdown.html">
-        <span class="fas fa-file"></span>
-         
-        Week 3 R Markdown
-      </a>
-    </li>
-    <li>
-      <a href="week4-packages.html">
-        <span class="fas fa-archive"></span>
-         
-        Week 4 R Packages
-      </a>
-    </li>
-    <li>
-      <a href="week5-roxygen.html">
-        <span class="fas fa-question-circle"></span>
-         
-        Week 5 Roxygen
-      </a>
-    </li>
-    <li>
-      <a href="week6-more-packages.html">
-        <span class="fas fa-folder"></span>
-         
-        Week 6 More Packages
-      </a>
-    </li>
-    <li>
-      <a href="week7-more-git.html">
-        <span class="fas fa-git"></span>
-         
-        Week 7 More Git
-      </a>
-    </li>
-    <li>
-      <a href="week8-ggplot2.html">
-        <span class="fas fa-image"></span>
-         
-        Week 8 ggplot2
-      </a>
-    </li>
-    <li>
-      <a href="week9-data-wrangling.html">
-        <span class="fas fa-broom"></span>
-         
-        Week 9 tidyverse
-      </a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-git"></span>
+    <span class="fab fa-git"></span>
      
     Git
      
@@ -421,14 +347,14 @@ div.tocify {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="intro-git.html">
-        <span class="fas fa-cogs"></span>
+        <span class="fab fa-github"></span>
          
-        Intro to Git + GitHub/Lab
+        Intro to Git + GitHub
       </a>
     </li>
     <li>
       <a href="more-git.html">
-        <span class="fas fa-github"></span>
+        <span class="fab fa-github-alt"></span>
          
         More Git + GitHub
       </a>
@@ -442,7 +368,7 @@ div.tocify {
     </li>
     <li>
       <a href="websites.html">
-        <span class="fas fa-chrome"></span>
+        <span class="fab fa-chrome"></span>
          
         Websites with GitHub
       </a>
@@ -505,10 +431,42 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="week6-more-packages.html">
+        <span class="fas fa-folder"></span>
+         
+        More package stuff
+      </a>
+    </li>
+    <li>
       <a href="shiny.html">
         <span class="fas fa-gamepad"></span>
          
         Shiny GUIs
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-broom"></span>
+     
+    Tidyverse
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="week8-ggplot2.html">
+        <span class="fas fa-image"></span>
+         
+        ggplot2
+      </a>
+    </li>
+    <li>
+      <a href="week9-data-wrangling.html">
+        <span class="fas fa-broom"></span>
+         
+        tidyr
       </a>
     </li>
   </ul>
@@ -528,8 +486,8 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/RVerse-Tutorials/RWorkflow-NWFSC-2020">
-    <span class="fas fa-github"></span>
+  <a href="https://github.com/RVerse-Tutorials/RWorkflow">
+    <span class="fab fa-github"></span>
      
     Repo
   </a>
@@ -572,8 +530,15 @@ Robust
 </tr>
 </tbody>
 </table>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
 <p>This week I will discuss how to make an R package. R packages are not just for work that you share with others. Most of my code projects are organized into an R package and definitely any project that I have that involves data and code is organized into an R package. The package framework really helps you write robust code and well documented code. It also makes it easy to bundle data with code. Organizing your code into an R package is very, very easy. If you are at the stage where you write functions and multiple R scripts for your projects, you need to be aware of how to package your code because it is such a powerful (and common) code organization method in R. By the end of this session, you will be able to build your own mini R package. I’ll show you how to host it on GitLab or GitHub with a nice little landing page.</p>
 <p>If/when you want to go into R packaging in more depth, see Hadley Wickham’s book <a href="http://r-pkgs.had.co.nz/">R Packages</a>.</p>
+<p>This material was covered in the 2020 NWFSC workshop sessions:</p>
+<ul>
+<li><a href="https://youtu.be/6d62KvS5v7Q">2020 Video</a></li>
+</ul>
+</div>
 <div id="why-a-package" class="section level2">
 <h2>Why a package?</h2>
 <p>An R package is an easy and the standard way to organize your R code, document your code, and share your code with other people. Why use an R package rather than just make a bunch of scripts?</p>
@@ -818,9 +783,8 @@ Rprof(tmp&lt;-tempfile())
 for(i in 1:10000){ b=t(a)%*%a }
 Rprof()
 summaryRprof(tmp)$by.self</code></pre>
-<pre><code>##             self.time self.pct total.time total.pct
-## &quot;%*%&quot;            0.56    93.33       0.56     93.33
-## &quot;t.default&quot;      0.04     6.67       0.04      6.67</code></pre>
+<pre><code>##       self.time self.pct total.time total.pct
+## &quot;%*%&quot;      0.58      100       0.58       100</code></pre>
 <pre class="r"><code>Rprof(NULL) #stop profiling</code></pre>
 <p><strong>microbenchmark</strong></p>
 <p>This is a handy package for comparing speeds of code.</p>

@@ -338,81 +338,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-calendar"></span>
-     
-    Workshop Weekly Notes
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="week1-rstudio.html">
-        <span class="fas fa-cogs"></span>
-         
-        Week 1 RStudio + Version Control
-      </a>
-    </li>
-    <li>
-      <a href="week2-coding.html">
-        <span class="fas fa-code"></span>
-         
-        Week 2 More Git + Code Organization
-      </a>
-    </li>
-    <li>
-      <a href="week3-RMarkdown.html">
-        <span class="fas fa-file"></span>
-         
-        Week 3 R Markdown
-      </a>
-    </li>
-    <li>
-      <a href="week4-packages.html">
-        <span class="fas fa-archive"></span>
-         
-        Week 4 R Packages
-      </a>
-    </li>
-    <li>
-      <a href="week5-roxygen.html">
-        <span class="fas fa-question-circle"></span>
-         
-        Week 5 Roxygen
-      </a>
-    </li>
-    <li>
-      <a href="week6-more-packages.html">
-        <span class="fas fa-folder"></span>
-         
-        Week 6 More Packages
-      </a>
-    </li>
-    <li>
-      <a href="week7-more-git.html">
-        <span class="fas fa-git"></span>
-         
-        Week 7 More Git
-      </a>
-    </li>
-    <li>
-      <a href="week8-ggplot2.html">
-        <span class="fas fa-image"></span>
-         
-        Week 8 ggplot2
-      </a>
-    </li>
-    <li>
-      <a href="week9-data-wrangling.html">
-        <span class="fas fa-broom"></span>
-         
-        Week 9 tidyverse
-      </a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-git"></span>
+    <span class="fab fa-git"></span>
      
     Git
      
@@ -421,14 +347,14 @@ div.tocify {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="intro-git.html">
-        <span class="fas fa-cogs"></span>
+        <span class="fab fa-github"></span>
          
-        Intro to Git + GitHub/Lab
+        Intro to Git + GitHub
       </a>
     </li>
     <li>
       <a href="more-git.html">
-        <span class="fas fa-github"></span>
+        <span class="fab fa-github-alt"></span>
          
         More Git + GitHub
       </a>
@@ -442,7 +368,7 @@ div.tocify {
     </li>
     <li>
       <a href="websites.html">
-        <span class="fas fa-chrome"></span>
+        <span class="fab fa-chrome"></span>
          
         Websites with GitHub
       </a>
@@ -505,10 +431,42 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="week6-more-packages.html">
+        <span class="fas fa-folder"></span>
+         
+        More package stuff
+      </a>
+    </li>
+    <li>
       <a href="shiny.html">
         <span class="fas fa-gamepad"></span>
          
         Shiny GUIs
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-broom"></span>
+     
+    Tidyverse
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="week8-ggplot2.html">
+        <span class="fas fa-image"></span>
+         
+        ggplot2
+      </a>
+    </li>
+    <li>
+      <a href="week9-data-wrangling.html">
+        <span class="fas fa-broom"></span>
+         
+        tidyr
       </a>
     </li>
   </ul>
@@ -528,8 +486,8 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/RVerse-Tutorials/RWorkflow-NWFSC-2020">
-    <span class="fas fa-github"></span>
+  <a href="https://github.com/RVerse-Tutorials/RWorkflow">
+    <span class="fab fa-github"></span>
      
     Repo
   </a>
@@ -572,6 +530,8 @@ Robust
 </tr>
 </tbody>
 </table>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
 <p>This week I will cover more advanced topics regarding R packages:</p>
 <ul>
 <li>How to use the “check” feature to find problems in your package.</li>
@@ -580,7 +540,13 @@ Robust
 <li>Using pkgdown to make a website for your package.</li>
 </ul>
 <p>If/when you want to go into R packaging in more depth, work through the material from this <a href="https://combine-australia.github.io/r-pkg-dev/">R package workshop material</a>. You’ve seen much of this material so it should be somewhat familiar. See also Hadley Wickham’s book <a href="http://r-pkgs.had.co.nz/">R Packages</a>.</p>
+<p>This material was covered in the NWFSC workshop sessions:</p>
+<p><a href="https://youtu.be/O4rojT7aeb0">2020 Video</a></p>
+</div>
+<div id="set-up" class="section level2">
+<h2>Set-up</h2>
 <p>The repository that I used to demo these features is here: <a href="https://github.com/eeholmes/MyNewPackage" class="uri">https://github.com/eeholmes/MyNewPackage</a></p>
+</div>
 <div id="checking-your-package" class="section level2">
 <h2>Checking your package</h2>
 <p>Just use the RStudio Check in the Build tab. You’ll have many issues (most likely). Plug away at each one until you pass with no errors or warnings. Don’t ignore Notes either. They are sometimes more serious than the errors and warnings.</p>

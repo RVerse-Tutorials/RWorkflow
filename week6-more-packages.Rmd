@@ -19,6 +19,10 @@ kable(dt, col.names=NULL) %>%
   row_spec(1, bold = FALSE, color = "white", background = "blue") %>%
   column_spec(column = 1:5, width = "20%")
 ```
+
+
+## Overview
+
 This week I will cover more advanced topics regarding R packages:
 
 * How to use the "check" feature to find problems in your package.
@@ -28,8 +32,15 @@ This week I will cover more advanced topics regarding R packages:
 
 If/when you want to go into R packaging in more depth, work through the material from this [R package workshop material](https://combine-australia.github.io/r-pkg-dev/). You've seen much of this material so it should be somewhat familiar. See also Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/). 
 
+This material was covered in the NWFSC workshop sessions:
+
+[2020 Video](https://youtu.be/O4rojT7aeb0)
+
+## Set-up
+
 The repository that I used to demo these features is here:
 https://github.com/eeholmes/MyNewPackage
+
 
 ## Checking your package
 

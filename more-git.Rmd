@@ -34,6 +34,10 @@ Here I will cover a few more come Git tasks and show some straight-forward ways 
 * How to add Git to an existing RStudio project and get that on GitHub or GitLab.
 -->
 
+This material was covered in the beginning of one of the 2020 NWFSC workshop sessions:
+
+* [2020 Video](https://www.youtube.com/watch?v=k0P3e39qcA4)
+
 ## Downloading other people's repositories
 
 There are two easy ways to do this. Use the one that seems more logical to you.

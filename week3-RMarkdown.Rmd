@@ -11,7 +11,24 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This week will shift gears and talk about writing reports using R Markdown. There are many on-line tutorials for R Markdown which will cover the basics. I'll focus on some of the aspects of R Markdown that can really speed up your work: automating the making of tables and graphs. Our work often involves making tables that process some data and then report that in tables. When the data change (which happens often), we have to remake tables (and graphs). This is very time-consuming and creates errors. I'll show you how to automate this process so you are not manually remaking tables for reports.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+dt <- data.frame("Compartmentalized", "Documented", "Extendible", "Reproducible", "Robust")
+kable(dt, col.names=NULL) %>%
+  kable_styling(full_width = TRUE) %>%
+  row_spec(1, bold = FALSE, color = "white", background = "blue") %>%
+  column_spec(column = 1:5, width = "20%")
+```
+
+# Overview
+
+This session will introduce writing reports using R Markdown. There are many on-line tutorials for R Markdown which will cover the basics. I'll focus on some of the aspects of R Markdown that can really speed up your work: automating the making of tables and graphs. Our work often involves making tables that process some data and then report that in tables. When the data change (which happens often), we have to remake tables (and graphs). This is very time-consuming and creates errors. I'll show you how to automate this process so you are not manually remaking tables for reports. You can output your file in many formats: html, PDF, Word, presentations.  
+
+This session will exploring a small slice of R Markdown. When you are ready to explore more, go to this great R Markdown resource [R Markdown for Scientists](https://rmd4sci.njtierney.com/). [The R Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is also a good resource.
+
+This material was covered in the 2020 NWFSC workshops:
+
+* [2020 Video](https://www.youtube.com/watch?v=IGc2cgMFoPs)
 
 ## Set-up
 
@@ -32,14 +49,6 @@ tinytex::install_tinytex()
 ```
 
 Note the first time you make a PDF, tinytex will load any needed packages and it can take a **long** time. You'll see a spinning wheel on the R Markdown tab.
-
-
-
-## Overview
-
-R Markdown is a format that allows you to combine text and R code.  From RStudio you can output your file in many formats: html, PDF, Word, presentations.  We are exploring a small slice of R Markdown.  
-
-When you are ready to explore more, go to this great R Markdown resource [R Markdown for Scientists](https://rmd4sci.njtierney.com/). [The R Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is also a good resource.
 
 
 ## Templates

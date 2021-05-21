@@ -19,6 +19,9 @@ kable(dt, col.names=NULL) %>%
   row_spec(1, bold = FALSE, color = "white", background = "blue") %>%
   column_spec(column = 1:5, width = "20%")
 ```
+
+## Overview 
+
 This week I will cover some more features of using Git, GitHub, and RStudio. Although I'll be using GitHub, the same workflow applies to GitLab. I am going to be using GitHub Desktop to interact with GitHub since I find that GitHub Desktop helps me deal with merge conflicts and reverts (getting rid of changes I have made).
 
 * What's a merge conflict and how to fix it
@@ -32,6 +35,11 @@ This week I will cover some more features of using Git, GitHub, and RStudio. Alt
 I'll be illustrating this with this repo: https://github.com/eeholmes/MyNewPackage
 You can see a real-world example of this here on my MARSS package repo:
 https://github.com/nwfsc-timeseries/MARSS
+
+This material was covered in the NWFSC workshop sessions:
+
+* [2020 Video](https://youtu.be/ZoB3dsZId9U )
+
 
 ## Merge conflicts
 

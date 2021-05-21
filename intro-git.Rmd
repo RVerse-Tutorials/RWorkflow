@@ -26,6 +26,10 @@ I will introduce you to RStudio and GitHub/GitLab and show you how to use GitHub
 
 I'm going to show you how to work with Git/GitHub/GitLab with no command-line interface. The goal is to futz with Git as little as possible. See the Links tab above for a nice online workshop on Git/GitHub if you want to learn more.
 
+This material was covered in the NWFSC Workshops
+
+* [2020 Video](https://www.youtube.com/watch?v=HxIpxVdQsDs)
+
 # RStudio
 
 When you open RStudio you will see 4 panels:

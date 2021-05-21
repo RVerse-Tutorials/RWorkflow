@@ -11,7 +11,16 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Documenting your code and data with Roxygen
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+dt <- data.frame("Compartmentalized", "Documented", "Extendible", "Reproducible", "Robust")
+kable(dt, col.names=NULL) %>%
+  kable_styling(full_width = TRUE) %>%
+  row_spec(1, bold = FALSE, color = "white", background = "blue") %>%
+  column_spec(column = 1:5, width = "20%")
+```
+
+## Roxygen
 
 We all know that documenting our code is important, but equally important is to be able to read that documentation. If you use R, you know that the help feature (?function) is essential. If you organize your code into an R package, it is super easy to create help files that you and users can use to call up using ?. Documenting code may sound like a snoozer of a topic, but using Roxygen and diligently writing documentation for my functions and data is one of the top 3 habits that has made my coding more efficient. You can also document all your data in the same way.
 
@@ -38,12 +47,7 @@ Here is an example of the default [pkgdown-generated webpage](http://jebyrnes.gi
 
 ### Not just for public products!
 
-This is an example of a package that is purely *personal*. It is for the data, and a few utility functions, for a group of researchers working with a shared set of data.
-
-```
-help(package="SardineForecast")
-```
-
+I use Roxygen to document my personal projects more than for public projects. The Roxygen format helps me document both my functions and data that I am using so that I can reproduce my own work and so I have the information that I need when I do the final write-ups.
 
 ## Set-up
 

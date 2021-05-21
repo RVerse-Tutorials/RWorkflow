@@ -11,9 +11,26 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+dt <- data.frame("Compartmentalized", "Documented", "Extendible", "Reproducible", "Robust")
+kable(dt, col.names=NULL) %>%
+  kable_styling(full_width = TRUE) %>%
+  row_spec(1, bold = FALSE, color = "white", background = "blue") %>%
+  column_spec(column = 1:5, width = "20%")
+```
+
+## Overview
+
 This week I will give an introduction to plotting with ggplot. Getting a basic familiarity with ggplot will really save you a lot of time that you spend futzing with plots. 
 
 This is oriented to those with little or no experience using ggplot or those who have tried it and gotten frustrated. If you already use ggplot, you won't find this session very interesting.  The goal of this session is to get you started. Once you have the basics, there are a gazillion ggplot tutorials online (though personally the basics are all I need).
+
+This material was covered in the NWFSC workshop sessions:
+
+* [2020 Video](https://youtu.be/odCam8JxvKI)
+
+## Set-up
 
 You will need to install the ggplot2 and gridExtra packages for this session.
 
@@ -21,7 +38,6 @@ You will need to install the ggplot2 and gridExtra packages for this session.
 library(ggplot2)
 library(gridExtra)
 ```
-
 
 # Basic xy plot
 
@@ -51,7 +67,7 @@ Here's your `ggplot()` workflow.
 ```{r}
 df <- data.frame(x=mtcars$hp, val=mtcars$mpg)
 p1 <- ggplot(df, aes(x=x, y=val)) #set up data and x and y
-p2 <- p1 + geom_point() # Tell it what to do with that (add a line)
+p2 <- p1 + geom_point() # Tell it what to do with that (add points)
 p2 # plot it
 ```
 
@@ -82,7 +98,7 @@ plot(x, val, type="b", lwd=2, lty=2,
      pch=21, col="red", cex=4, bg="blue")
 ```
 
-With `ggplot()`, the approach is quite different and the names are mostly totally different. A cheatsheet of things you commonly use will be helpful when start (I still use one).
+With `ggplot()`, the approach is quite different and the names are mostly totally different. A cheatsheet of things you commonly use will be helpful when starting out (I still use one).
 
 There are two different workflows that you need to decide on.
 

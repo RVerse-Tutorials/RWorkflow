@@ -1,0 +1,14 @@
+---
+title: "Font Awesome in R Markdown"
+output: html_document
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+# Just a few tests with `r fa("font-awesome-logo-full", fill = "forestgreen")`
+
+It works well in headings...
+
+# `r fa("github", fill = "steelblue")` H1 Heading

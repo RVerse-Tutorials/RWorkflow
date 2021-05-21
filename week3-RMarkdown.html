@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -336,81 +338,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-calendar"></span>
-     
-    Workshop Weekly Notes
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="week1-rstudio.html">
-        <span class="fas fa-cogs"></span>
-         
-        Week 1 RStudio + Version Control
-      </a>
-    </li>
-    <li>
-      <a href="week2-coding.html">
-        <span class="fas fa-code"></span>
-         
-        Week 2 More Git + Code Organization
-      </a>
-    </li>
-    <li>
-      <a href="week3-RMarkdown.html">
-        <span class="fas fa-file"></span>
-         
-        Week 3 R Markdown
-      </a>
-    </li>
-    <li>
-      <a href="week4-packages.html">
-        <span class="fas fa-archive"></span>
-         
-        Week 4 R Packages
-      </a>
-    </li>
-    <li>
-      <a href="week5-roxygen.html">
-        <span class="fas fa-question-circle"></span>
-         
-        Week 5 Roxygen
-      </a>
-    </li>
-    <li>
-      <a href="week6-more-packages.html">
-        <span class="fas fa-folder"></span>
-         
-        Week 6 More Packages
-      </a>
-    </li>
-    <li>
-      <a href="week7-more-git.html">
-        <span class="fas fa-git"></span>
-         
-        Week 7 More Git
-      </a>
-    </li>
-    <li>
-      <a href="week8-ggplot2.html">
-        <span class="fas fa-image"></span>
-         
-        Week 8 ggplot2
-      </a>
-    </li>
-    <li>
-      <a href="week9-data-wrangling.html">
-        <span class="fas fa-broom"></span>
-         
-        Week 9 tidyverse
-      </a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-git"></span>
+    <span class="fab fa-git"></span>
      
     Git
      
@@ -419,14 +347,14 @@ div.tocify {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="intro-git.html">
-        <span class="fas fa-cogs"></span>
+        <span class="fab fa-github"></span>
          
-        Intro to Git + GitHub/Lab
+        Intro to Git + GitHub
       </a>
     </li>
     <li>
       <a href="more-git.html">
-        <span class="fas fa-github"></span>
+        <span class="fab fa-github-alt"></span>
          
         More Git + GitHub
       </a>
@@ -440,7 +368,7 @@ div.tocify {
     </li>
     <li>
       <a href="websites.html">
-        <span class="fas fa-chrome"></span>
+        <span class="fab fa-chrome"></span>
          
         Websites with GitHub
       </a>
@@ -503,10 +431,42 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="week6-more-packages.html">
+        <span class="fas fa-folder"></span>
+         
+        More package stuff
+      </a>
+    </li>
+    <li>
       <a href="shiny.html">
         <span class="fas fa-gamepad"></span>
          
         Shiny GUIs
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-broom"></span>
+     
+    Tidyverse
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="week8-ggplot2.html">
+        <span class="fas fa-image"></span>
+         
+        ggplot2
+      </a>
+    </li>
+    <li>
+      <a href="week9-data-wrangling.html">
+        <span class="fas fa-broom"></span>
+         
+        tidyr
       </a>
     </li>
   </ul>
@@ -526,8 +486,8 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/RVerse-Tutorials/RWorkflow-NWFSC-2020">
-    <span class="fas fa-github"></span>
+  <a href="https://github.com/RVerse-Tutorials/RWorkflow">
+    <span class="fab fa-github"></span>
      
     Repo
   </a>
@@ -549,7 +509,35 @@ div.tocify {
 </div>
 
 
-<p>This week will shift gears and talk about writing reports using R Markdown. There are many on-line tutorials for R Markdown which will cover the basics. I’ll focus on some of the aspects of R Markdown that can really speed up your work: automating the making of tables and graphs. Our work often involves making tables that process some data and then report that in tables. When the data change (which happens often), we have to remake tables (and graphs). This is very time-consuming and creates errors. I’ll show you how to automate this process so you are not manually remaking tables for reports.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Compartmentalized
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Documented
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Extendible
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Reproducible
+</td>
+<td style="text-align:left;color: white !important;background-color: blue !important;width: 20%; ">
+Robust
+</td>
+</tr>
+</tbody>
+</table>
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>This session will introduce writing reports using R Markdown. There are many on-line tutorials for R Markdown which will cover the basics. I’ll focus on some of the aspects of R Markdown that can really speed up your work: automating the making of tables and graphs. Our work often involves making tables that process some data and then report that in tables. When the data change (which happens often), we have to remake tables (and graphs). This is very time-consuming and creates errors. I’ll show you how to automate this process so you are not manually remaking tables for reports. You can output your file in many formats: html, PDF, Word, presentations.</p>
+<p>This session will exploring a small slice of R Markdown. When you are ready to explore more, go to this great R Markdown resource <a href="https://rmd4sci.njtierney.com/">R Markdown for Scientists</a>. <a href="https://bookdown.org/yihui/rmarkdown/">The R Markdown Definitive Guide</a> is also a good resource.</p>
+<p>This material was covered in the 2020 NWFSC workshops:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IGc2cgMFoPs">2020 Video</a></li>
+</ul>
 <div id="set-up" class="section level2">
 <h2>Set-up</h2>
 <p>If you want to try out the things I am showing, you will need R and RStudio. If you have never made an R Markdown file, there are some packages that you’ll need.</p>
@@ -564,11 +552,6 @@ div.tocify {
 <pre><code>install.packages(&#39;tinytex&#39;)
 tinytex::install_tinytex()</code></pre>
 <p>Note the first time you make a PDF, tinytex will load any needed packages and it can take a <strong>long</strong> time. You’ll see a spinning wheel on the R Markdown tab.</p>
-</div>
-<div id="overview" class="section level2">
-<h2>Overview</h2>
-<p>R Markdown is a format that allows you to combine text and R code. From RStudio you can output your file in many formats: html, PDF, Word, presentations. We are exploring a small slice of R Markdown.</p>
-<p>When you are ready to explore more, go to this great R Markdown resource <a href="https://rmd4sci.njtierney.com/">R Markdown for Scientists</a>. <a href="https://bookdown.org/yihui/rmarkdown/">The R Markdown Definitive Guide</a> is also a good resource.</p>
 </div>
 <div id="templates" class="section level2">
 <h2>Templates</h2>
@@ -649,7 +632,7 @@ After knitting your Rmd file, a Preview will appear.  Click the 'Publish' button
 <p><strong>Figure caption displayed and alt text will be the same</strong></p>
 <pre class="r"><code>plot(1:10)</code></pre>
 <div class="figure">
-<img src="week3-RMarkdown_files/figure-html/unnamed-chunk-1-1.png" alt="This will be the alt text" width="672" />
+<img src="week3-RMarkdown_files/figure-html/unnamed-chunk-2-1.png" alt="This will be the alt text" width="672" />
 <p class="caption">
 This will be the alt text
 </p>
@@ -1121,6 +1104,7 @@ dist
 <div id="figure-and-table-numbering" class="section level2">
 <h2>Figure and Table numbering</h2>
 <p>Automatic figures and table numbering for a paper or a report is a hassle with R Markdown. Here is my <a href="https://stackoverflow.com/a/47298632/10947238">solution</a>. The Journal Article repo uses this method.</p>
+</div>
 </div>
 
 <hr>
