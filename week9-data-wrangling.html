@@ -554,9 +554,9 @@ a %&gt;% fun(a^2)</code></pre>
 <p>This kind of mistake is so easy to make. You want say, <code>rnorm(n=a)</code>, and accidentally write that in your pipe.</p>
 <pre class="r"><code>a &lt;- 3
 a %&gt;% rnorm(n=a)</code></pre>
-<pre><code>## [1] 3.705530 2.426452 1.416433</code></pre>
+<pre><code>## [1] 2.029148 0.903325 3.851952</code></pre>
 <pre class="r"><code>a %&gt;% rnorm()</code></pre>
-<pre><code>## [1] -0.9667773  0.4410533 -0.1664830</code></pre>
+<pre><code>## [1] -0.9141921  1.9386994 -0.3330177</code></pre>
 <p>The left flows into the first function spot, UNLESS you specified that and then it flows to the second or third or whatever is “open”.</p>
 <ul>
 <li><p>You can spend hours trying to solve your piping issue when you could immediately write down code using intermediate values.</p></li>
@@ -576,16 +576,16 @@ x %&gt;% transform(new = mpg^cyl) %&gt;% select(mpg, new)
 <pre class="r"><code>df &lt;- data.frame(mpg=runif(10, 10, 30))
 fun(df, cyl=0.5)</code></pre>
 <pre><code>##         mpg      new
-## 1  19.47981 4.413593
-## 2  22.78268 4.773120
-## 3  11.42950 3.380755
-## 4  25.66669 5.066231
-## 5  11.72482 3.424153
-## 6  28.66866 5.354312
-## 7  20.33823 4.509793
-## 8  23.31032 4.828076
-## 9  10.19454 3.192889
-## 10 15.95314 3.994138</code></pre>
+## 1  15.15951 3.893521
+## 2  26.76402 5.173396
+## 3  17.31408 4.161019
+## 4  17.62835 4.198613
+## 5  26.68647 5.165895
+## 6  13.99436 3.740903
+## 7  13.71048 3.702767
+## 8  15.80307 3.975307
+## 9  17.29457 4.158674
+## 10 15.84034 3.979992</code></pre>
 <p>Why, why? It didn’t complain but this is wrong!</p>
 <pre class="r"><code>fun(mtcars[1:5,], cyl=0.5)</code></pre>
 <pre><code>##                    mpg          new
@@ -776,16 +776,16 @@ fun(df, cyl=0.5)</code></pre>
 ## Volvo 142E          21.4   4  1  1    4    2</code></pre>
 <pre class="r"><code>df %&gt;% select(where(is.numeric))</code></pre>
 <pre><code>##         mpg
-## 1  19.47981
-## 2  22.78268
-## 3  11.42950
-## 4  25.66669
-## 5  11.72482
-## 6  28.66866
-## 7  20.33823
-## 8  23.31032
-## 9  10.19454
-## 10 15.95314</code></pre>
+## 1  15.15951
+## 2  26.76402
+## 3  17.31408
+## 4  17.62835
+## 5  26.68647
+## 6  13.99436
+## 7  13.71048
+## 8  15.80307
+## 9  17.29457
+## 10 15.84034</code></pre>
 </div>
 <div id="filter" class="section level3">
 <h3><code>filter()</code></h3>
@@ -923,26 +923,26 @@ df %&gt;% summarize_all(mean)</code></pre>
                   pop=paste0(rep(&quot;r&quot;,8),rep(1:2,each=4)),
                   Week1=rnorm(8), Week2=rnorm(8), Week3=rnorm(8), Week4=rnorm(8))
 head(df2)</code></pre>
-<pre><code>##   id pop       Week1       Week2       Week3      Week4
-## 1 s1  r1  0.36163790 -1.15161439  0.45700136 -0.5642810
-## 2 s2  r1 -1.35283905 -0.06930206 -0.47395272 -0.8239044
-## 3 s1  r1 -0.68847136 -1.08507244 -0.15416780 -2.4089877
-## 4 s2  r1 -2.13816456 -0.94182858  1.02325272 -1.4233351
-## 5 s1  r2  0.03542144  0.23931184 -0.02011335  0.2425279
-## 6 s2  r2  0.61496984  0.51560113  0.20341493  0.7254091</code></pre>
+<pre><code>##   id pop       Week1       Week2      Week3      Week4
+## 1 s1  r1 -0.83551483  1.43965277  1.6664183 -1.1372446
+## 2 s2  r1 -1.63488346  0.94898124 -0.6758438  0.4264061
+## 3 s1  r1 -0.04529889  0.57412587 -1.1827151 -0.2683061
+## 4 s2  r1 -0.19604077  0.01420002  1.2047887 -0.8967390
+## 5 s1  r2 -0.71715376 -1.28082258 -0.8366131 -0.1310937
+## 6 s2  r2 -0.78223915 -1.39280749  1.1294121 -1.2896710</code></pre>
 <p>The <code>group_by()</code> function allows you to do more complicated things. Take the mean by pop.</p>
 <pre class="r"><code>df2 %&gt;% group_by(pop) %&gt;% summarize_all(mean)</code></pre>
 <pre><code>## Warning in mean.default(id): argument is not numeric or logical: returning NA
 
 ## Warning in mean.default(id): argument is not numeric or logical: returning NA</code></pre>
 <pre><code>## # A tibble: 2 x 6
-##   pop      id  Week1  Week2  Week3  Week4
-## * &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-## 1 r1       NA -0.954 -0.812  0.213 -1.31 
-## 2 r2       NA  0.390  0.391 -0.264  0.240</code></pre>
+##   pop      id   Week1  Week2 Week3  Week4
+## * &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 r1       NA -0.678   0.744 0.253 -0.469
+## 2 r2       NA  0.0901 -0.682 0.607 -0.676</code></pre>
 <pre class="r"><code>apply(df2[df2$pop==&quot;r1&quot;,3:6],2,mean)</code></pre>
 <pre><code>##      Week1      Week2      Week3      Week4 
-## -0.9544593 -0.8119544  0.2130334 -1.3051270</code></pre>
+## -0.6779345  0.7442400  0.2531620 -0.4689709</code></pre>
 <p>Take the mean for all weeks by pop and id. Notice that I have to specify columns for <code>summarize()</code>.</p>
 <pre class="r"><code>df2 %&gt;% 
   group_by(pop, id) %&gt;%
@@ -952,10 +952,10 @@ head(df2)</code></pre>
 ## # Groups:   pop [2]
 ##   pop   id       mean
 ##   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
-## 1 r1    s1    -0.654 
-## 2 r1    s2    -0.775 
-## 3 r2    s1     0.306 
-## 4 r2    s2     0.0727</code></pre>
+## 1 r1    s1     0.0264
+## 2 r1    s2    -0.101 
+## 3 r2    s1    -0.480 
+## 4 r2    s2     0.149</code></pre>
 </div>
 <div id="combine-group-and-select" class="section level2">
 <h2>Combine group and select</h2>
@@ -965,10 +965,10 @@ head(df2)</code></pre>
   summarize_all(mean)</code></pre>
 <pre><code>## Adding missing grouping variables: `pop`</code></pre>
 <pre><code>## # A tibble: 2 x 5
-##   pop    Week1  Week2  Week3  Week4
-## * &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-## 1 r1    -0.954 -0.812  0.213 -1.31 
-## 2 r2     0.390  0.391 -0.264  0.240</code></pre>
+##   pop     Week1  Week2 Week3  Week4
+## * &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 r1    -0.678   0.744 0.253 -0.469
+## 2 r2     0.0901 -0.682 0.607 -0.676</code></pre>
 <p>Select based on name.</p>
 <pre class="r"><code>df2 %&gt;% group_by(pop) %&gt;% 
   select(ends_with(&quot;2&quot;)) %&gt;% 
@@ -977,8 +977,8 @@ head(df2)</code></pre>
 <pre><code>## # A tibble: 2 x 2
 ##   pop    Week2
 ## * &lt;chr&gt;  &lt;dbl&gt;
-## 1 r1    -0.812
-## 2 r2     0.391</code></pre>
+## 1 r1     0.744
+## 2 r2    -0.682</code></pre>
 </div>
 <div id="mutate" class="section level2">
 <h2><code>mutate()</code></h2>

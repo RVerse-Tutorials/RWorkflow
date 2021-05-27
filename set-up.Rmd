@@ -32,7 +32,7 @@ For the class, I am showing Git within RStudio, but it can be a real headache to
 I normally work with Git from GitHub Desktop only. It tends not to have the authentication headaches that Git in RStudio has. However, for the class I am going to work with Git from RStudio but I will also show GitHub Desktop. GitHub Desktop doesn't have the authentication headaches that Git in RStudio has.
 
 1. Get a GitHub or GitLab account
-2. Install Git for your operating system
+2. ~~Install Git for your operating system~~ Installing GitHub Desktop will also install Git now.
 3. Install GitHub Desktop
 4. Install R (if needed)
 5. Install RStudio (if needed)
