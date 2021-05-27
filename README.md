@@ -1,2 +1,3 @@
-# RWorkflow-NWFSC-2020
-R Workflow workshop material for NWFSC workshops May-June 2020
+# RWorkflow
+
+R Workflow workshop material for workshops 2018-2021
